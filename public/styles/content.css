@@ -1,0 +1,73 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+header,
+footer {
+  flex: 0 0 auto;
+}
+
+main {
+  text-align: center;
+  padding: 5vmin;
+  flex: 1 0 auto;
+}
+
+.create-post-btn {
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 2px solid black;
+    transition: transform 0.3s ease-in-out;
+    background-color: white;
+    color: black;
+    font-size: 1.5em;
+    
+}
+
+.create-post-btn:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+.card-link {
+    border: 2px solid black;
+    transition: transform .2s;
+}
+.card-link:hover{
+    transform: scale(1.05);
+    text-decoration: none;
+     
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: inherit;
+    text-decoration: none;
+}
+.container-fluid .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.heading{
+    font-size: 2.5em;
+    font-weight: 600;
+  }
+ 

@@ -1,0 +1,19 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-14">
+            <div class="text-left">
+                <h1 class="display-4  font-weight-bold "><%= blog.title %></h1>
+                <h6 class="text-muted">By- <%= blog.author %></h6>
+                <small class="text-muted">Published on-<%= blog.date %></small>
+                <% if(blog.image) { %>
+                    <img src="<%= blog.image %>" class="img-fluid rounded my-3 blog-image" alt="<%= blog.title %>">
+                <% } %>
+                <p class="text-left"><%= blog.content %></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include("partials/footer.ejs") %>
