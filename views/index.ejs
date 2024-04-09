@@ -8,7 +8,10 @@
         <% BlogPosts.forEach(function(blog) { %>
             <div class="col-md-4 ">
                 <a href="/post/<%= blog.id %>" >
-                    <div class="card-link mb-4 shadow-sm text-left" style="background-color: white; border-color: black;">
+                    <div class="card-link mb-4 shadow-sm text-left" style="background-color: white; border-color: black; position: relative;">
+                        <form action="/post/<%= blog.id %>?_method=DELETE" method="post">
+                            <button class="delete" type="submit" >X</button>
+                        </form>
                         <div class="card-body">
                             <h5 class="card-title"><%= blog.title %></h5>
                             <h6 class="card-subtitle mb-2 text-muted"><%= blog.author %></h6>
@@ -16,10 +19,11 @@
                             <p class="card-text" style="text-align: left;"><%= blog.content.substring(0, 200) %>...</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <a href="/post/<%= blog.id %>" class="readmore">Read More</a>
+                                    <a href="/post/<%= blog.id %>" class="readmore">Read More</a> <a href="/edit/<%= blog.id %>" class="edit">Edit</a>
                                 </div>
                             </div>
                         </div>
+                    
                     </div>
                 </a>
             </div>
